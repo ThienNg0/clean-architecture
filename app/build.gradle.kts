@@ -11,7 +11,7 @@ android {
 
     defaultConfig {
         applicationId = "com.example.clean_architecture"
-        minSdk = 34
+        minSdk = 28
         targetSdk = 34
         versionCode = 1
         versionName = "1.0"
@@ -34,6 +34,9 @@ android {
     }
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+    buildFeatures {
+        dataBinding = true
     }
 }
 val lifecycle_version = "2.8.6"
