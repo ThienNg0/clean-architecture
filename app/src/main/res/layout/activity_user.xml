@@ -13,6 +13,7 @@
         android:orientation="vertical"
         android:padding="16dp">
 
+
         <!-- Title or Header -->
         <TextView
             android:id="@+id/tvHeader"
@@ -23,6 +24,11 @@
             android:textStyle="bold"
             android:layout_gravity="center"
             android:paddingBottom="8dp"/>
+        <androidx.appcompat.widget.SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:queryHint="Search users" />
 
         <!-- RecyclerView for user list -->
         <androidx.recyclerview.widget.RecyclerView
