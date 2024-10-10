@@ -28,4 +28,12 @@ class UserViewModel @Inject constructor(
             _users.postValue(userList)       // Sử dụng postValue vì đang không trên UI thread
         }
     }
+    fun searchUsers(query: String) {
+        viewModelScope.launch {
+            val filteredList = getUsersUseCase().filter {
+                it.name.contains(query, ignoreCase = true)
+            }
+            _users.postValue(filteredList)
+        }
+    }
 }
